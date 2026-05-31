@@ -2,13 +2,17 @@ import streamlit as st
 import base64
 
 # CONFIG
-st.set_page_config(page_title="Perfil", layout="wide")
+st.set_page_config(page_title="Sites Parceiros", layout="wide")
+
+# FUNÇÃO base64
+def get_base64_image(path):
+    with open(path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
 # ==================================================
 # SEÇÃO - SITES PARCEIROS
 # ==================================================
 st.markdown("""
-    <hr style="margin-top:50px; margin-bottom:30px;">
-
     <h2 style='
         text-align:center;
         font-size:38px;
@@ -48,8 +52,7 @@ with link1:
             line-height:1.6;
         ">
             O iFood é uma plataforma de delivery que conecta
-            restaurantes, mercados e consumidores, permitindo
-            pedidos online de forma rápida e prática.
+            restaurantes, mercados e consumidores.
         </p>
 
         <div style="text-align:center; margin-top:15px;">
@@ -64,8 +67,6 @@ with link1:
             </a>
         </div>
     """, unsafe_allow_html=True)
-
-    st.markdown("</div>", unsafe_allow_html=True)
 
 # ================= LINK 2 =================
 with link2:
@@ -94,7 +95,7 @@ with link2:
             line-height:1.6;
         ">
             O Facebook é uma rede social utilizada para compartilhar
-            fotos, vídeos, notícias e interagir com pessoas do mundo todo.
+            fotos, vídeos e notícias.
         </p>
 
         <div style="text-align:center; margin-top:15px;">
@@ -110,11 +111,8 @@ with link2:
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("</div>", unsafe_allow_html=True)
-
 # ================= LINK 3 =================
 with link3:
-
 
     st.markdown("""
         <div style="text-align:center;">
@@ -140,8 +138,7 @@ with link3:
             line-height:1.6;
         ">
             A Netflix é uma plataforma de streaming que oferece
-            filmes, séries, documentários e conteúdos exclusivos
-            para entretenimento online.
+            filmes, séries e documentários.
         </p>
 
         <div style="text-align:center; margin-top:15px;">
@@ -156,16 +153,3 @@ with link3:
             </a>
         </div>
     """, unsafe_allow_html=True)
-
-    st.markdown("</div>", unsafe_allow_html=True)
-
-# =========================
-# WHATSAPP
-# =========================
-st.markdown(f"""
-    <div style="text-align: center; margin-top: 50px;">
-        <a href="https://wa.me/5583987220076" target="_blank">
-            <img src="data:image/png;base64,{zap_base64}" width="100">
-        </a>
-    </div>
-""", unsafe_allow_html=True)
