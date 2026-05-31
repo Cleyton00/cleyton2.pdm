@@ -3,11 +3,6 @@ import base64
 
 # CONFIG
 st.set_page_config(page_title="Perfil", layout="wide")
-
-# FUNÇÃO base64
-def get_base64_image(path):
-    with open(path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
 # ==================================================
 # SEÇÃO - SITES PARCEIROS
 # ==================================================
